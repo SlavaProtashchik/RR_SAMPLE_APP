@@ -1,5 +1,12 @@
 @import "bootstrap";
+
 $lightGray: #999;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 html {
   overflow-y: scroll;
@@ -77,6 +84,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: $lightGray;
+  overflow: hidden;
 
   a{
     color: #555;
@@ -97,5 +105,13 @@ footer {
       float: left;
       margin-left: 10px;
     }
+  }
+
+  .debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
   }
 }
